@@ -1,0 +1,34 @@
+name: Deploy dotnet tool licenses-reporter
+
+on:
+  push:
+    tags: [ "v[0-9]+.[0-9]+.[0-9]+" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: ♻️ Restore dependencies
+      run: dotnet restore
+    - name: ⚡ Set VERSION
+      run: |
+        echo "VERSION=$(echo ${{ github.ref_name }} | cut -c 2-)" >> $GITHUB_ENV
+    - name: 🧱 Build
+      run: dotnet build --configuration Release --no-restore
+      env:
+        VERSION: "${{ env.VERSION }}"
+    - name: 📦 Package
+      run: |
+        dotnet pack src/Cli --configuration Release --no-build -p:RepositoryUrl=https://github.com/${{ github.repository }} -p:BranchName=${{ github.head_ref }} --output ./artifacts --verbosity normal
+      env:
+        VERSION: "${{ env.VERSION }}"
+    - name: 🚀 Publish to nuget.org
+      if: startsWith(github.ref, 'refs/tags/v')
+      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key "${{ secrets.NUGET_APIKEY }}"
+      env:
+        VERSION: "${{ env.VERSION }}"
