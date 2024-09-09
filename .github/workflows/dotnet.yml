@@ -24,4 +24,4 @@ jobs:
     - name: Package
       run: dotnet pack src/Cli --configuration Release --no-build --verbosity normal --output ./artifacts
     - name: Publish to nuget.org
-      run: dotnet nuget push ./artifacts/*.nupkg --api-key "${{ secrets.NUGET_APIKEY }}" --skip-duplicate
+      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate --source --source https://api.nuget.org/v3/index.json --api-key "${{ secrets.NUGET_APIKEY }}"
