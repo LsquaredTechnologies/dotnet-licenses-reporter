@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>Lsquared.DotNetLicensesReporter.ExtraFormatters</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="FluentAssertions.Analyzers" Version="0.33.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
+    <PackageReference Include="Verify.Xunit" Version="26.2.0" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Cli.Formatters.Extra\Lsquared.DotNetLicensesReporter.Cli.Formatters.Extra.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters.Unused\Lsquared.DotNetLicensesReporter.Cli.Formatters.Unused.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters\Lsquared.DotNetLicensesReporter.Cli.Formatters.csproj" />
+    <ProjectReference Include="..\..\src\Core\Lsquared.DotNetLicensesReporter.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DotLiquidFormatterTests.Write.ShouldReturnsValidOutput.verified.txt">
+      <DependentUpon>DotLiquidFormatterTests.cs</DependentUpon>
+    </None>
+    <None Update="YamlFormatterTests.Write.ShouldReturnsValidOutput.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0].Split('(')[0])</ParentFile>
+      <DependentUpon>YamlFormatterTests.cs</DependentUpon>
+    </None>
+    <None Update="JsonFormatterTests.Write.ShouldReturnsValidOutput.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0].Split('(')[0])</ParentFile>
+      <DependentUpon>JsonFormatterTests.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>

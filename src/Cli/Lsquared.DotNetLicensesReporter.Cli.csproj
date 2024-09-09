@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>dotnet-licenses-reporter</AssemblyName>
+    <ToolCommandName>licenses</ToolCommandName>
+    <RootNamespace>Lsquared.DotNetLicensesReporter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="templates\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+    <PackageReference Include="Spectre.Console.Analyzer" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageReference Include="System.CommandLine.Hosting" Version="0.4.0-alpha.22272.1" />
+    <PackageReference Include="System.CommandLine.NamingConventionBinder" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cli.Formatters.Extra\Lsquared.DotNetLicensesReporter.Cli.Formatters.Extra.csproj" />
+    <ProjectReference Include="..\Cli.Formatters\Lsquared.DotNetLicensesReporter.Cli.Formatters.csproj" />
+    <ProjectReference Include="..\Core\Lsquared.DotNetLicensesReporter.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Strings\ListTemplatesCommand.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ListTemplatesCommand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Strings\ReportCommand.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportCommand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Strings\ExportTemplateCommand.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExportTemplateCommand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Strings\TemplatesCommand.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemplatesCommand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Strings\ListTemplatesCommand.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ListTemplatesCommand.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Strings\ReportCommand.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ReportCommand.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Strings\ExportTemplateCommand.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExportTemplateCommand.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Strings\TemplatesCommand.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TemplatesCommand.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

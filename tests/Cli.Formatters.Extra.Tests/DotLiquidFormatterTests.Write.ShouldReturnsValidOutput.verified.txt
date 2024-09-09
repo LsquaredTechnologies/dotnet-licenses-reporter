@@ -1,0 +1,1 @@
+﻿- dotnet-licenses-reporter v1.0.0

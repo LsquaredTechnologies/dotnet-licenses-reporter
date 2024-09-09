@@ -1,0 +1,11 @@
+﻿[
+  {
+    "packageId": "dotnet-licenses-reporter",
+    "packageVersion": "1.0.0",
+    "projectUrl": "https://nuget.org/Id1",
+    "license": "MIT",
+    "licenseUrl": "https://mit-license.org/",
+    "copyright": "Copyright",
+    "authors": []
+  }
+]

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lsquared.DotNetLicensesReporter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="dotnet-licenses-reporter" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build" Version="17.11.4" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.7.8" />
+    <PackageReference Include="NuGet.ProjectModel" Version="6.11.0" />
+    <PackageReference Include="NuGet.Versioning" Version="6.11.0" />
+    <!--<PackageReference Include="Spectre.Console" Version="0.49.1" />-->
+  </ItemGroup>
+
+</Project>

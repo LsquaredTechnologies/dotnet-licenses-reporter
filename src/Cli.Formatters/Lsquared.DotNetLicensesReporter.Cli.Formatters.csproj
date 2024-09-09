@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lsquared.DotNetLicensesReporter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="dotnet-licenses-reporter" />
+    <InternalsVisibleTo Include="$(AssemblyName).Benchmarks" />
+    <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+    <!--<PackageReference Include="Spectre.Console" Version="0.49.1" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Lsquared.DotNetLicensesReporter.Core.csproj" />
+  </ItemGroup>
+
+</Project>
