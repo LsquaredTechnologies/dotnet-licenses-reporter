@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{178D9611-ACD6-491E-9484-798D7EBCA6BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9743969C-409C-412E-9A1D-81565AAF300E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8AD4E5C3-1E28-43FE-9E56-0423FA07A8AC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		DotnetLicensesReporter.sln.licenseheader = DotnetLicensesReporter.sln.licenseheader
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Core", "src\Core\Lsquared.DotnetLicensesReporter.Core.csproj", "{183ED176-900F-4B8D-8584-63D5388405BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli", "src\Cli\Lsquared.DotnetLicensesReporter.Cli.csproj", "{43029787-76D6-45BD-B820-3C9DC86628A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters", "src\Cli.Formatters\Lsquared.DotnetLicensesReporter.Cli.Formatters.csproj", "{94E34588-0442-4E32-BD61-C83FFFF32676}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra", "src\Cli.Formatters.Extra\Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra.csproj", "{87B2766B-651B-408B-8159-6C1CB9FDE7C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Tests", "tests\Cli.Formatters.Extra.Tests\Lsquared.DotnetLicensesReporter.Cli.Formatters.Tests.csproj", "{955E11E4-1C0B-42C3-A228-B4BFE94BE846}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Benchmarks", "tests\Cli.Formatters.Extra.Benchmarks\Lsquared.DotnetLicensesReporter.Cli.Formatters.Benchmarks.csproj", "{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Unused", "src\Cli.Formatters.Unused\Lsquared.DotnetLicensesReporter.Cli.Formatters.Unused.csproj", "{9153D11A-5FBB-4626-B93E-54B732CAA1DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{183ED176-900F-4B8D-8584-63D5388405BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183ED176-900F-4B8D-8584-63D5388405BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183ED176-900F-4B8D-8584-63D5388405BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183ED176-900F-4B8D-8584-63D5388405BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43029787-76D6-45BD-B820-3C9DC86628A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43029787-76D6-45BD-B820-3C9DC86628A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43029787-76D6-45BD-B820-3C9DC86628A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43029787-76D6-45BD-B820-3C9DC86628A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E34588-0442-4E32-BD61-C83FFFF32676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E34588-0442-4E32-BD61-C83FFFF32676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E34588-0442-4E32-BD61-C83FFFF32676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E34588-0442-4E32-BD61-C83FFFF32676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B2766B-651B-408B-8159-6C1CB9FDE7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B2766B-651B-408B-8159-6C1CB9FDE7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B2766B-651B-408B-8159-6C1CB9FDE7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B2766B-651B-408B-8159-6C1CB9FDE7C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955E11E4-1C0B-42C3-A228-B4BFE94BE846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955E11E4-1C0B-42C3-A228-B4BFE94BE846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955E11E4-1C0B-42C3-A228-B4BFE94BE846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955E11E4-1C0B-42C3-A228-B4BFE94BE846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9153D11A-5FBB-4626-B93E-54B732CAA1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9153D11A-5FBB-4626-B93E-54B732CAA1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9153D11A-5FBB-4626-B93E-54B732CAA1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9153D11A-5FBB-4626-B93E-54B732CAA1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{183ED176-900F-4B8D-8584-63D5388405BD} = {9743969C-409C-412E-9A1D-81565AAF300E}
+		{43029787-76D6-45BD-B820-3C9DC86628A0} = {9743969C-409C-412E-9A1D-81565AAF300E}
+		{94E34588-0442-4E32-BD61-C83FFFF32676} = {9743969C-409C-412E-9A1D-81565AAF300E}
+		{87B2766B-651B-408B-8159-6C1CB9FDE7C9} = {9743969C-409C-412E-9A1D-81565AAF300E}
+		{955E11E4-1C0B-42C3-A228-B4BFE94BE846} = {178D9611-ACD6-491E-9484-798D7EBCA6BD}
+		{1A28764A-D7FF-4745-A7BC-502E82CC5CBF} = {178D9611-ACD6-491E-9484-798D7EBCA6BD}
+		{9153D11A-5FBB-4626-B93E-54B732CAA1DA} = {9743969C-409C-412E-9A1D-81565AAF300E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2A175BD-3937-4E7A-A1D6-C018FC4BDBD7}
+	EndGlobalSection
+EndGlobal

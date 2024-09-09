@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "report",
+      //"commandLineArgs": "@./Properties/response.rsp", 
+      "workingDirectory": "."
+    }
+  }
+}

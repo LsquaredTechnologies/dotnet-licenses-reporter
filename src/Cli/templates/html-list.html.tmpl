@@ -1,0 +1,21 @@
+<ul class="licenses">
+  {%- for package in packages -%}
+  <li>
+    {%- if package.project_url -%}
+    <a href="{{ package.project_url }}" class="package" target="_blank">
+    {%- endif -%}
+    {{ package.package_id }}
+    {%- if package.project_url -%}
+    </a>
+    {%- endif -%}
+    v{{ package.package_version }},
+    {%- if package.license_url -%}
+    <a href="{{ package.license_url }}" class="license" target="_blank">
+    {%- endif -%}
+    {{ package.license }}
+    {%- if package.license_url -%}
+    </a>
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>

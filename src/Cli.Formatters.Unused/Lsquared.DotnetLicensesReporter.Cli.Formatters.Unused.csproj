@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lsquared.DotnetLicensesReporter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Lsquared.DotnetLicensesReporter.Cli" />
+    <InternalsVisibleTo Include="$(AssemblyName.Replace('.Unused', '')).Benchmarks" />
+    <InternalsVisibleTo Include="$(AssemblyName.Replace('.Unused', '')).Tests" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Fluid.Core" Version="2.11.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Lsquared.DotnetLicensesReporter.Core.csproj" />
+  </ItemGroup>
+  
+</Project>

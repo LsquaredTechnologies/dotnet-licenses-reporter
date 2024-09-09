@@ -1,0 +1,11 @@
+﻿[
+  {
+    "packageId": "Lsquared.DotnetLicensesReporter.Cli",
+    "packageVersion": "1.0.0",
+    "projectUrl": "https://nuget.org/Lsquared.DotnetLicensesReporter.Cli",
+    "license": "MIT",
+    "licenseUrl": "https://mit-license.org/",
+    "copyright": "Copyright",
+    "authors": []
+  }
+]

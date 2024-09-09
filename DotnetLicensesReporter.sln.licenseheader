@@ -1,0 +1,12 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// <copyright file="%FileName%" company="Lsquared Technologies">
+// Copyright © Lsquared Technologies
+// SPDX-License-Identifier: MIT
+// </copyright>
+
+extensions: .vb
+' <copyright file="%FileName%" company="Lsquared Technologies">
+' Copyright © Lsquared Technologies
+' SPDX-License-Identifier: MIT
+' </copyright>

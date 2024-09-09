@@ -1,0 +1,36 @@
+<table class="licenses">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th>License</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for package in packages -%}
+    <tr>
+      <td>
+        {%- if package.project_url -%}
+        <a href="{{ package.project_url }}" class="package" target="_blank">
+        {%- endif -%}
+        {{ package.package_id }}
+        {%- if package.project_url -%}
+        </a>
+        {%- endif -%}
+      </td>
+      <td>
+        v{{ package.package_version }}
+      </td>
+      <td>
+        {%- if package.license_url -%}
+        <a href="{{ package.license_url }}" class="license" target="_blank">
+        {%- endif -%}
+        {{ package.license }}
+        {%- if package.license_url -%}
+        </a>
+        {%- endif -%}
+      </td>
+    </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
