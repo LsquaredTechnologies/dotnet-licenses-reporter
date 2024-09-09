@@ -22,4 +22,6 @@ jobs:
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
     - name: Package
-      run: dotnet pack src/Cli --configuration Release --no-build --verbosity normal
+      run: dotnet pack src/Cli --configuration Release --no-build --verbosity normal --output ./artifacts
+    - name: Publish to nuget.org
+      run: dotnet nuget push ./artifacts/*.nupkg --api-key "${{ secrets.NUGET_APIKEY }}" --skip-duplicate
