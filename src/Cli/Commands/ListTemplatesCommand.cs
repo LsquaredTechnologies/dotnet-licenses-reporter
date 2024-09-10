@@ -15,14 +15,16 @@ internal sealed partial class ListTemplatesCommand : Command, ICustomHelpProvide
 {
     public Argument<string?> TemplateNameArgument { get; } = new(
         name: "template-name",
-        description: "If specified, only the templates matching the name will be shown.")
+        description: Strings.ListTemplatesCommand.TemplateArgumentDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
+        Name = Strings.ListTemplatesCommand.TemplateArgumentHelpName,
+
     };
 
     public Option<List<string>> TagsOption { get; } = new(
         aliases: ["--tag", "-t"],
-        description: "Filters the templates based on the tag.",
+        description: Strings.ListTemplatesCommand.TagsOptionDescription,
         parseArgument: (ArgumentResult result) => SplitValues(result.Tokens))
     {
         Arity = ArgumentArity.ZeroOrMore,
@@ -30,14 +32,14 @@ internal sealed partial class ListTemplatesCommand : Command, ICustomHelpProvide
 
     public Option<bool> ShowAllColumnsOption { get; } = new(
         aliases: ["--columns-all"],
-        description: "Displays all columns in the output.")
+        description: Strings.ListTemplatesCommand.ShowAllColumnsOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
     };
 
     public Option<List<string>> ColumnsOption { get; } = new(
         aliases: ["--columns"],
-        description: "Specifies the columns to display in the output.",
+        description: Strings.ListTemplatesCommand.ColumnsOptionDescription,
         parseArgument: (ArgumentResult result) => SplitValues(result.Tokens))
     {
         AllowMultipleArgumentsPerToken = true,

@@ -38,13 +38,13 @@ internal static class HelpContextExtensions
         context.Output.Write(" \x1b[1m");
         if (command.Subcommands.Count > 0)
         {
-            context.Output.Write("[command]");
+            context.Output.Write("[COMMAND]");
 
             if (command.Subcommands.Sum(o => o.Options.Count) > 0)
-                context.Output.Write(" [command-options]");
+                context.Output.Write(" [COMMAND_OPTIONS]");
 
             if (command.Arguments.Count > 0)
-                context.Output.Write(" [arguments]");
+                context.Output.Write(" [ARGS]");
         }
         else
         {
@@ -52,7 +52,7 @@ internal static class HelpContextExtensions
                 context.WriteArguments(command.Arguments);
 
             if (command.Options.Count > 0)
-                context.Output.Write("[options]");
+                context.Output.Write("[OPTIONS]");
         }
 
         context.Output.Write("\x1b[0m ");
@@ -104,13 +104,14 @@ internal static class HelpContextExtensions
         if (command.Subcommands.Count is 0)
             return;
 
+        context.Output.WriteLine();
         context.Output.Write("\x1b[1m");
         context.Output.Write("Commands:");
         context.Output.WriteLine("\x1b[0m");
         var twoColumnRows = command.Subcommands.Where(c => !c.IsHidden).Select(c => context.HelpBuilder.GetTwoColumnRow(c, context)).ToList();
         context.HelpBuilder.WriteColumns(twoColumnRows, context);
         context.Output.WriteLine();
-        context.Output.WriteLine("Run 'dotnet licenses [command] --help' for more information on a command.");
+        context.Output.WriteLine("Run 'dotnet licenses [COMMAND] --help' for more information on a command.");
     }
 
     public static void WriteOptions(this HelpContext context, Command command)
@@ -123,7 +124,6 @@ internal static class HelpContextExtensions
         context.Output.Write("\x1b[0m");
         var twoColumnRows = command.Options.Where(o => !o.IsHidden).Select(o => context.HelpBuilder.GetTwoColumnRow(o, context)).ToList();
         context.HelpBuilder.WriteColumns(twoColumnRows, context);
-        context.Output.WriteLine();
     }
 
     public static void WriteLine(this HelpContext context, string? value = null) =>

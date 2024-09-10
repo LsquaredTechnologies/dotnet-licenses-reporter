@@ -4,54 +4,59 @@
 // </copyright>
 
 using System.CommandLine;
+using System.CommandLine.Help;
 using System.CommandLine.Parsing;
 
+using Lsquared.DotnetLicensesReporter.Customizations;
 using Lsquared.DotnetLicensesReporter.Formatters;
 
 namespace Lsquared.DotnetLicensesReporter.Commands;
 
-internal sealed partial class ReportCommand : Command
+internal sealed partial class ReportCommand : Command, ICustomHelpProvider
 {
     public Argument<FileSystemInfo> ProjectArgument { get; } = new(
         name: "project",
-        description: "The project or solution to report licenses from.",
-        getDefaultValue: () => new DirectoryInfo(Environment.CurrentDirectory))
+        description: Strings.ReportCommand.ProjectArgumentDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
+        HelpName = Strings.ReportCommand.ProjectArgumentHelpName,
     };
 
     public Option<DirectoryInfo?> OutputDirectoryOption { get; } = new(
         aliases: ["--output", "-o"],
-        description: "The output directory write files to.")
+        description: Strings.ReportCommand.OutputDirectoryOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
+        ArgumentHelpName = Strings.ReportCommand.OutputDirectoryOptionHelpName,
     };
 
     public Option<List<string>> OutputFormatsOption { get; } = new(
         aliases: ["--output-format", "-f"],
-        description: "The output formats to use to display package licenses.",
+        description: Strings.ReportCommand.OutputFormatsOptionDescription,
         parseArgument: (ArgumentResult result) => SplitValues(result.Tokens))
     {
         Arity = ArgumentArity.ZeroOrMore,
+        ArgumentHelpName = Strings.ReportCommand.OutputFormatsOptionHelpName,
     };
 
     public Option<bool> SilentOption { get; } = new(
         aliases: ["--silent"],
-        description: ".")
+        description: Strings.ReportCommand.SilentOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
     };
 
     public Option<FileInfo?> TemplateOption { get; } = new(
         aliases: ["--template", "-t"],
-        description: "A liquid template file to use to display package licenses when output-formats contain 'template'.")
+        description: Strings.ReportCommand.TemplateOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
+        ArgumentHelpName = Strings.ReportCommand.TemplateOptionHelpName,
     };
 
     public Option<bool> OpenFileOption { get; } = new(
         aliases: ["--open"],
-        description: ".")
+        description: Strings.ReportCommand.OpenFileOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
     };
@@ -71,6 +76,9 @@ internal sealed partial class ReportCommand : Command
 
         OutputFormatsOption.SetDefaultValue(OutputFormats.Defaults);
     }
+
+    public IEnumerable<Action<HelpContext>> CustomHelpLayout() =>
+        CustomHelpBuilder.DefaultHelp(this);
 
     private static List<string> SplitValues(IReadOnlyList<Token> tokens) =>
         tokens.SelectMany(o => o.Value.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)).ToList();

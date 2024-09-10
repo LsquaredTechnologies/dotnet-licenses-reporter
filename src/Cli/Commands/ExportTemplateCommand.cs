@@ -17,9 +17,10 @@ internal sealed partial class ExportTemplateCommand : Command, ICustomHelpProvid
 {
     public Argument<string?> TemplateNameArgument { get; } = new(
         name: "template-name",
-        description: "The name of the template to export.")
+        description: Strings.ExportTemplateCommand.TemplateArgumentDescription)
     {
         Arity = ArgumentArity.ExactlyOne,
+        Name = Strings.ExportTemplateCommand.TemplateArgumentHelpName,
     };
 
     public Option<FileInfo> FileNameOption { get; } = new(
@@ -27,7 +28,7 @@ internal sealed partial class ExportTemplateCommand : Command, ICustomHelpProvid
         description: Strings.ExportTemplateCommand.FileNameOptionDescription)
     {
         Arity = ArgumentArity.ZeroOrOne,
-        ArgumentHelpName = "filename",
+        ArgumentHelpName = Strings.ExportTemplateCommand.FileNameOptionHelpName,
     };
 
     public ExportTemplateCommand() : base("export", Strings.ExportTemplateCommand.Description)

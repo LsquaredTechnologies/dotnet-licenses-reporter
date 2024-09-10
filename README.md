@@ -1,25 +1,12 @@
 # .NET Licenses Reporter
 
-
-## Table of Contents
-
-1. [👋 About](#about)
-2. [🔥 Getting Started](#getting-started)
-   - [💻 Installing](#installing)
-   - [🚀 Usage](#usage)
-
-4. [🤝 Contributing](#contributing)
-
-6. [✍ Author](#author)
-7. [📝 License](#license)
-
 [![GitHub Release][github-release-badge-url]][github-release-url]
 [![Feature Requests][github-feature-request-badge-url]][github-feature-request-url]
 [![Bugs][github-issues-badge-url]][github-issues-url]
 [![Contributors][github-contributors-badge-url]][github-contributors-url]
 [![NuGet Version][nuget-version-badge-url]][nuget-version-url]
-{# TODO add Chocolatey #}
-{# TODO add WinGet #}
+<!--{# TODO add Chocolatey #}-->
+<!--{# TODO add WinGet #}-->
 
 
 ## Table of Contents
@@ -40,7 +27,7 @@
 > .NET tool to report licenses in a project or solution.
 
 
-## 💡 Description
+<!-- ## 💡 Description -->
 
 <!-- Add a longer description here with images and more... -->
 
@@ -50,7 +37,7 @@
 Make sure you have [`dotnet`](https://dotnet.microsoft.com/) installed.
 
 
-[Lsquared.DotnetLicensesReporter.Cli](https://nuget.org/Lsquared.DotnetLicensesReporter.Cli)
+[dotnet-licenses-reporter](https://nuget.org/dotnet-licenses-reporter.Cli)
 tool can be installed using `dotnet` CLI.
 
 
@@ -62,26 +49,26 @@ For advanced users and developers, it can be installed and tested directly from 
 #### From `dotnet` CLI:
 
 ```shell
-dotnet tool install --global Lsquared.DotnetLicensesReporter.Cli
+dotnet tool install --global dotnet-licenses-reporter
 ```
 
 or inside a specific directory:
 
 ```shell
 dotnet new tool-manifest
-dotnet tool install Lsquared.DotnetLicensesReporter.Cli
+dotnet tool install dotnet-licenses-reporter
 ```
 
 If tool is already installed and need upgrade:
 
 ```shell
-dotnet tool update Lsquared.DotnetLicensesReporter.Cli
+dotnet tool update dotnet-licenses-reporter
 ```
 
 To remove the tool:
 
 ```shell
-dotnet tool uninstall Lsquared.DotnetLicensesReporter.Cli
+dotnet tool uninstall dotnet-licenses-reporter
 ```
 
 
@@ -98,18 +85,29 @@ dotnet tool uninstall Lsquared.DotnetLicensesReporter.Cli
 ### 🚀 Usage
 
 ```shell
-Usage: dotnet licenses [command] [command-options]
+Usage:
+dotnet licenses [<PROJECT | SOLUTION>] [OPTIONS]
+dotnet licenses [COMMAND] [COMMAND_OPTIONS]
 
+Collect and report all licenses used in a project or solution.
 
+Arguments:
+  <PROJECT | SOLUTION>  The project or solution to report licenses from.
 
 Options:
-  --version       Show version information
-  -?, -h, --help  Show help and usage information
+  -o, --output <OUTPUT_PATH>      The output directory write files to.
+  -f, --output-format <FORMAT>    The output formats to use to display package licenses. []
+  --silent                        Suppress output to console.
+  -t, --template <TEMPLATE_PATH>  A liquid template file to use to display package licenses when output-formats contain
+                                  "template".
+  --open                          Open the generated file with the default application.
+  --version                       Show version information
+  -?, -h, --help                  Show help and usage information
 
 Commands:
-  templates
+  templates  Allows to list and export templates.
 
-Run 'dotnet licenses [command] --help' for more information on a command.
+Run 'dotnet licenses [COMMAND] --help' for more information on a command.
 ```
 
 
@@ -138,12 +136,7 @@ We support both VSCode and Visual Studio for all .Net developments and VSCode fo
 #### Run tests
 
 ```shell
-cd [Project]/App/
-dotnet test
-```
-
-```shell
-cd [Project]/Lib/
+cd [Project]/
 dotnet test
 ```
 
@@ -185,16 +178,16 @@ Copyright © 2024 LionelL2
 
 
 
-[github-release-badge-url]: https://flat.badgen.net/github/release//
-[github-release-url]: https://github.com///releases
-[github-feature-request-badge-url]: https://img.shields.io/github/issues///feature-request.svg
+[github-release-badge-url]: https://flat.badgen.net/github/release/LsquaredTechnologies/dotnet-licenses-reporter/
+[github-release-url]: https://github.com/LsquaredTechnologies/dotnet-licenses-reporter/releases
+[github-feature-request-badge-url]: https://img.shields.io/github/issues/LsquaredTechnologies/dotnet-licenses-reporter/feature-request.svg
 [github-feature-request-url]: https://github.com///issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc
-[github-issues-badge-url]: https://img.shields.io/github/issues///bug.svg
+[github-issues-badge-url]: https://img.shields.io/github/issues/LsquaredTechnologies/dotnet-licenses-reporter/bug.svg
 [github-issues-url]: https://github.com///issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug
-[github-contributors-badge-url]: https://img.shields.io/github/contributors//.svg?style=flat-square
-[github-contributors-url]: https://github.com///graphs/contributors
-[nuget-version-badge-url]: https://img.shields.io/nuget/v/Lsquared.DotnetLicensesReporter.Cli?style=flat-square
-[nuget-version-url]: https://www.nuget.org/packages/Lsquared.DotnetLicensesReporter.Cli
+[github-contributors-badge-url]: https://img.shields.io/github/contributors/LsquaredTechnologies/dotnet-licenses-reporter.svg?style=flat-square
+[github-contributors-url]: https://github.com/LsquaredTechnologies/dotnet-licenses-reporter/graphs/contributors
+[nuget-version-badge-url]: https://img.shields.io/nuget/v/dotnet-licenses-reporter?style=flat-square
+[nuget-version-url]: https://www.nuget.org/packages/dotnet-licenses-reporter
 
 
 

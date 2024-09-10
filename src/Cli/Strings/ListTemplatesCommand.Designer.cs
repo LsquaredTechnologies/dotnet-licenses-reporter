@@ -61,11 +61,56 @@ namespace Lsquared.DotnetLicensesReporter.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Specifies the columns to display in the output..
+        /// </summary>
+        internal static string ColumnsOptionDescription {
+            get {
+                return ResourceManager.GetString("ColumnsOptionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lists templates containing the specified template name. If no name is specified, lists all templates..
         /// </summary>
         internal static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays all columns in the output..
+        /// </summary>
+        internal static string ShowAllColumnsOptionDescription {
+            get {
+                return ResourceManager.GetString("ShowAllColumnsOptionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filters the templates based on the tag..
+        /// </summary>
+        internal static string TagsOptionDescription {
+            get {
+                return ResourceManager.GetString("TagsOptionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If specified, only the templates matching the name will be shown..
+        /// </summary>
+        internal static string TemplateArgumentDescription {
+            get {
+                return ResourceManager.GetString("TemplateArgumentDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TEMPLATE_NAME.
+        /// </summary>
+        internal static string TemplateArgumentHelpName {
+            get {
+                return ResourceManager.GetString("TemplateArgumentHelpName", resourceCulture);
             }
         }
     }

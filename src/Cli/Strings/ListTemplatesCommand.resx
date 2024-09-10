@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ColumnsOptionDescription" xml:space="preserve">
+    <value>Specifies the columns to display in the output.</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Lists templates containing the specified template name. If no name is specified, lists all templates.</value>
+  </data>
+  <data name="ShowAllColumnsOptionDescription" xml:space="preserve">
+    <value>Displays all columns in the output.</value>
+  </data>
+  <data name="TagsOptionDescription" xml:space="preserve">
+    <value>Filters the templates based on the tag.</value>
+  </data>
+  <data name="TemplateArgumentDescription" xml:space="preserve">
+    <value>If specified, only the templates matching the name will be shown.</value>
+  </data>
+  <data name="TemplateArgumentHelpName" xml:space="preserve">
+    <value>TEMPLATE_NAME</value>
   </data>
 </root>

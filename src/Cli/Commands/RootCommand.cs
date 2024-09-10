@@ -23,6 +23,21 @@ internal sealed class RootCommand : System.CommandLine.RootCommand, ICustomHelpP
         Add(TemplatesCommand);
     }
 
-    public IEnumerable<Action<HelpContext>> CustomHelpLayout() =>
-        CustomHelpBuilder.DefaultHelp(this);
+    public IEnumerable<Action<HelpContext>> CustomHelpLayout() => [
+        (HelpContext context) => {
+            context.Output.WriteLine("\x1b[1mUsage: \x1b[0m");
+            context.Output.WriteLine("\x1b[36mdotnet licenses\x1b[1m [<PROJECT | SOLUTION>] [OPTIONS]\x1b[0m");
+            context.Output.WriteLine("\x1b[36mdotnet licenses\x1b[1m [COMMAND] [COMMAND_OPTIONS]\x1b[0m");
+            context.Output.WriteLine();
+        },
+        (HelpContext context) => context.WriteDescription(ReportCommand),
+        (HelpContext context) => context.WriteArguments(ReportCommand),
+        (HelpContext context) => context.WriteOptions(ReportCommand),
+        (HelpContext context) => {
+            context.Output.WriteLine("  --version                       Show version information");
+            context.Output.WriteLine("  -?, -h, --help                  Show help and usage information");
+        },
+        (HelpContext context) => context.WriteCommands(ReportCommand),
+        (HelpContext context) => context.WriteCommands(this),
+    ];
 }

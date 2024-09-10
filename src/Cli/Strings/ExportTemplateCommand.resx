@@ -123,7 +123,13 @@
   <data name="FileNameOptionDescription" xml:space="preserve">
     <value>The file name to export the template to. If no name is specified, outputs to console.</value>
   </data>
+  <data name="FileNameOptionHelpName" xml:space="preserve">
+    <value>FILE_PATH</value>
+  </data>
   <data name="TemplateArgumentDescription" xml:space="preserve">
-    <value>The template name to export.</value>
+    <value>The name of the template to export.</value>
+  </data>
+  <data name="TemplateArgumentHelpName" xml:space="preserve">
+    <value>TEMPLATE_NAME</value>
   </data>
 </root>

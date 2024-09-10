@@ -61,7 +61,7 @@ namespace Lsquared.DotnetLicensesReporter.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Allows to list and export templates..
         /// </summary>
         internal static string Description {
             get {

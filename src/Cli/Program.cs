@@ -27,7 +27,6 @@ var root = new Lsquared.DotnetLicensesReporter.Commands.RootCommand();
 var parser = new CommandLineBuilder(root)
     .UseDefaults()
     .UseHelpBuilder((_) => CustomHelpBuilder.Instance.Value)
-    ////.UseHelpBuilder((_) => CustomHelpBuilder.Instance.Value)
     .UseHost((host) => host
         .ConfigureServices((_, services) => services
             .AddAnsiConsole()
@@ -49,7 +48,7 @@ var parser = new CommandLineBuilder(root)
         .UseCommandHandler<ListTemplatesCommand, ListTemplatesCommand.CommandHandler>())
     .AddMiddleware(async (context, next) =>
     {
-        root.ReportCommand.OutputFormatsOption.AddCompletions(OutputFormats.Get().ToArray());
+        _ = root.ReportCommand.OutputFormatsOption.AddCompletions([.. OutputFormats.Get()]);
         root.ReportCommand.OutputFormatsOption.SetDefaultValue(OutputFormats.Defaults);
         await next(context);
     })

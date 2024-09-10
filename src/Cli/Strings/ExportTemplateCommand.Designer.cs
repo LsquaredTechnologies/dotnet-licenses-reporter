@@ -79,11 +79,29 @@ namespace Lsquared.DotnetLicensesReporter.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The template name to export..
+        ///   Looks up a localized string similar to FILE_PATH.
+        /// </summary>
+        internal static string FileNameOptionHelpName {
+            get {
+                return ResourceManager.GetString("FileNameOptionHelpName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the template to export..
         /// </summary>
         internal static string TemplateArgumentDescription {
             get {
                 return ResourceManager.GetString("TemplateArgumentDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TEMPLATE_NAME.
+        /// </summary>
+        internal static string TemplateArgumentHelpName {
+            get {
+                return ResourceManager.GetString("TemplateArgumentHelpName", resourceCulture);
             }
         }
     }

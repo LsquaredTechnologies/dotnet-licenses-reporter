@@ -120,4 +120,34 @@
   <data name="Description" xml:space="preserve">
     <value>Collect and report all licenses used in a project or solution.</value>
   </data>
+  <data name="OpenFileOptionDescription" xml:space="preserve">
+    <value>Open the generated file with the default application.</value>
+  </data>
+  <data name="OutputDirectoryOptionDescription" xml:space="preserve">
+    <value>The output directory write files to.</value>
+  </data>
+  <data name="OutputDirectoryOptionHelpName" xml:space="preserve">
+    <value>OUTPUT_PATH</value>
+  </data>
+  <data name="OutputFormatsOptionDescription" xml:space="preserve">
+    <value>The output formats to use to display package licenses.</value>
+  </data>
+  <data name="OutputFormatsOptionHelpName" xml:space="preserve">
+    <value>FORMAT</value>
+  </data>
+  <data name="ProjectArgumentDescription" xml:space="preserve">
+    <value>The project or solution to report licenses from.</value>
+  </data>
+  <data name="ProjectArgumentHelpName" xml:space="preserve">
+    <value>PROJECT | SOLUTION</value>
+  </data>
+  <data name="SilentOptionDescription" xml:space="preserve">
+    <value>Suppress output to console.</value>
+  </data>
+  <data name="TemplateOptionDescription" xml:space="preserve">
+    <value>A liquid template file to use to display package licenses when output-formats contain "template".</value>
+  </data>
+  <data name="TemplateOptionHelpName" xml:space="preserve">
+    <value>TEMPLATE_PATH</value>
+  </data>
 </root>
