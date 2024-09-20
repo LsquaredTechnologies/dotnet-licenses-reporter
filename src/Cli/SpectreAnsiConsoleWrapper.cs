@@ -8,7 +8,7 @@ using System.CommandLine.IO;
 
 using Spectre.Console;
 
-namespace Lsquared.DotnetLicensesReporter;
+namespace Lsquared.DotnetTools.LicensesReporter;
 
 internal sealed class SpectreAnsiConsoleWrapper : IConsole
 {

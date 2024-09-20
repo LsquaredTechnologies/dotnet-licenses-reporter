@@ -6,9 +6,9 @@
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
-namespace Lsquared.DotnetLicensesReporter.Formatters;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 internal static class OutputFormatterExtensions
 {

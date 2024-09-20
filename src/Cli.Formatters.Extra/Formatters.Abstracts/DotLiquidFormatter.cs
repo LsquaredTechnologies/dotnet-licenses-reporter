@@ -7,13 +7,13 @@ using System.Globalization;
 
 using DotLiquid;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 using Microsoft.Extensions.Logging;
 
 using NuGet.Versioning;
 
-namespace Lsquared.DotnetLicensesReporter.Formatters.Abstracts;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters.Abstracts;
 
 internal abstract partial class DotLiquidFormatter(
     ILogger<DotLiquidFormatter> logger,

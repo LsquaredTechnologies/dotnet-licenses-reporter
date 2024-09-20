@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Lsquared.DotnetLicensesReporter.ExtraFormatters;
+namespace Lsquared.DotnetTools.LicensesReporter.ExtraFormatters;
 
 public abstract class JsonFormatterTests
 {
@@ -27,9 +27,9 @@ public abstract class JsonFormatterTests
             JsonFormatter formatter = new(NullLogger<JsonFormatter>.Instance, true);
             using MemoryStream stream = new();
             PackageLicense licenseInformation = new(
-                "Lsquared.DotnetLicensesReporter.Cli",
+                "Lsquared.DotnetTools.LicensesReporter.Cli",
                 new("1.0.0"),
-                new("https://nuget.org/Lsquared.DotnetLicensesReporter.Cli"),
+                new("https://nuget.org/Lsquared.DotnetTools.LicensesReporter.Cli"),
                 "MIT",
                 new("https://mit-license.org/"),
                 "Copyright",

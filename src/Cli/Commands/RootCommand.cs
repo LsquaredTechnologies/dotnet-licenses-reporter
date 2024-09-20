@@ -5,9 +5,9 @@
 
 using System.CommandLine.Help;
 
-using Lsquared.DotnetLicensesReporter.Customizations;
+using Lsquared.DotnetTools.LicensesReporter.Customizations;
 
-namespace Lsquared.DotnetLicensesReporter.Commands;
+namespace Lsquared.DotnetTools.LicensesReporter.Commands;
 
 internal sealed class RootCommand : System.CommandLine.RootCommand, ICustomHelpProvider
 {

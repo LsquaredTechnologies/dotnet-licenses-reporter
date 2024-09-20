@@ -9,7 +9,7 @@ using Microsoft.Build.Construction;
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Execution;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public static class ProjectCollector
 {

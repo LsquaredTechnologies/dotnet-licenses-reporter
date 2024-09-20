@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-namespace Lsquared.DotnetLicensesReporter.Core;
+namespace Lsquared.DotnetTools.LicensesReporter.Core;
 
 /// <content>
 /// Some values from https://spdx.org/licenses/.

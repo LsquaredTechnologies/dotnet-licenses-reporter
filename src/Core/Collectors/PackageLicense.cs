@@ -6,7 +6,7 @@
 using NuGet.Packaging;
 using NuGet.Versioning;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public sealed record class PackageLicense(
     string PackageId,

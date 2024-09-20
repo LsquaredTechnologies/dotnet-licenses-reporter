@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Core;
+using Lsquared.DotnetTools.LicensesReporter.Core;
 
 using NuGet.Configuration;
 using NuGet.Packaging;
@@ -11,7 +11,7 @@ using NuGet.Packaging.Core;
 using NuGet.Protocol;
 using NuGet.Protocol.Core.Types;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public static class PackageLicenseCollector
 {

@@ -10,7 +10,7 @@ using Microsoft.Build.Evaluation;
 using NuGet.Packaging;
 using NuGet.ProjectModel;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public sealed class PackageCollector(ILockFileFactory lockFileFactory)
 {

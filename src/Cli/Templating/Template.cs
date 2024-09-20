@@ -3,6 +3,6 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-namespace Lsquared.DotnetLicensesReporter.Templating;
+namespace Lsquared.DotnetTools.LicensesReporter.Templating;
 
 internal sealed record class Template(string TemplateName, string ShortName, string Author, HashSet<string> Tags, Func<Stream> GetStream);
