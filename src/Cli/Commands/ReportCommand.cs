@@ -31,7 +31,7 @@ internal sealed partial class ReportCommand : Command, ICustomHelpProvider
     };
 
     public Option<List<string>> OutputFormatsOption { get; } = new(
-        aliases: ["--output-format", "-f"],
+        aliases: ["--output-format", "-of"],
         description: Strings.ReportCommand.OutputFormatsOptionDescription,
         parseArgument: (ArgumentResult result) => SplitValues(result.Tokens))
     {
