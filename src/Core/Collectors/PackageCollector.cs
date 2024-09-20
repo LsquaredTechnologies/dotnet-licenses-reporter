@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 
 using Microsoft.Build.Evaluation;
 
+using NuGet.Frameworks;
 using NuGet.Packaging;
 using NuGet.ProjectModel;
 
@@ -40,8 +41,10 @@ public sealed class PackageCollector(ILockFileFactory lockFileFactory)
 
             var assetsFile = lockFileFactory.GetFromFile(projectAssetsFile.FullName);
             var targetFramework = project.GetTargetFramework();
-            var runtimeIdentifier = project.GetRuntimeIdentifier();
+            if (targetFramework == NuGetFramework.UnsupportedFramework)
+                continue;
 
+            var runtimeIdentifier = project.GetRuntimeIdentifier();
             var target = assetsFile.Targets
                 .Single(o => o.TargetFramework == targetFramework && (o.RuntimeIdentifier ?? string.Empty) == runtimeIdentifier);
 
