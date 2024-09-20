@@ -18,7 +18,7 @@ public static partial class Licenses
         ["https://licenses.nuget.org/AGPL-3.0-only"] = AGPL_3_0_ONLY,
         ["https://licenses.nuget.org/AGPL-3.0-or-later"] = AGPL_3_0_OR_LATER,
         ["https://licenses.nuget.org/Beerware"] = BEERWARE,
-        ["https://licenses.nuget.org/0BSDe"] = BSD_0,
+        ["https://licenses.nuget.org/0BSD"] = BSD_0,
         ["https://licenses.nuget.org/BSD-1-Clause"] = BSD_1,
         ["https://licenses.nuget.org/BSD-2-Clause"] = BSD_2,
         ["https://licenses.nuget.org/BSD-3-Clause"] = BSD_3,

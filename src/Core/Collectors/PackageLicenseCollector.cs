@@ -34,9 +34,9 @@ public static class PackageLicenseCollector
         }
     }
 
-    private static PackageLicense GetLicense(DownloadResourceResult pacakge)
+    private static PackageLicense GetLicense(DownloadResourceResult package)
     {
-        using var nuspecStream = pacakge.PackageReader.GetNuspec();
+        using var nuspecStream = package.PackageReader.GetNuspec();
         var manifest = Manifest.ReadFrom(nuspecStream, false);
         var metadata = manifest.Metadata;
         UpdateProjectUrl(metadata);
