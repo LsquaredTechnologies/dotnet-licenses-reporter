@@ -8,20 +8,6 @@
 <!--{# TODO add Chocolatey #}-->
 <!--{# TODO add WinGet #}-->
 
-
-## Table of Contents
-
-1. [👋 About](#about)
-2. [🔥 Getting Started](#getting-started)
-   - [💻 Installing](#installing)
-   - [🚀 Usage](#usage)
-
-4. [🤝 Contributing](#contributing)
-
-6. [✍ Author](#author)
-7. [📝 License](#license)
-
-
 ## 👋 About
 
 > .NET tool to report licenses in a project or solution.
