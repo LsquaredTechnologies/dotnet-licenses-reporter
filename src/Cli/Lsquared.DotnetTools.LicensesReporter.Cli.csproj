@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-licenses</ToolCommandName>
-    <RootNamespace>Lsquared.DotnetLicensesReporter</RootNamespace>
+    <RootNamespace>Lsquared.DotnetTools.LicensesReporter</RootNamespace>
     <EnableStyleCopAnalyzer>true</EnableStyleCopAnalyzer>
     <EnablePreviewFeatures>true</EnablePreviewFeatures>
   </PropertyGroup>
@@ -50,9 +50,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cli.Formatters.Extra\Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra.csproj" />
-    <ProjectReference Include="..\Cli.Formatters\Lsquared.DotnetLicensesReporter.Cli.Formatters.csproj" />
-    <ProjectReference Include="..\Core\Lsquared.DotnetLicensesReporter.Core.csproj" />
+    <ProjectReference Include="..\Cli.Formatters.Extra\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Extra.csproj" />
+    <ProjectReference Include="..\Cli.Formatters\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.csproj" />
+    <ProjectReference Include="..\Core\Lsquared.DotnetTools.LicensesReporter.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
