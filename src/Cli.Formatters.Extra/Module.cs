@@ -5,9 +5,9 @@
 
 using System.Runtime.CompilerServices;
 
-using Lsquared.DotnetLicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
 
-namespace Lsquared.DotnetLicensesReporter;
+namespace Lsquared.DotnetTools.LicensesReporter;
 
 internal static class Module
 {

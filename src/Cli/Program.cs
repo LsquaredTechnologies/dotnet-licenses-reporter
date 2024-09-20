@@ -9,13 +9,13 @@ using System.CommandLine.Hosting;
 using System.CommandLine.Parsing;
 using System.Text;
 
-using Lsquared.DotnetLicensesReporter;
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Commands;
-using Lsquared.DotnetLicensesReporter.Console;
-using Lsquared.DotnetLicensesReporter.Customizations;
-using Lsquared.DotnetLicensesReporter.Formatters;
-using Lsquared.DotnetLicensesReporter.Templating;
+using Lsquared.DotnetTools.LicensesReporter;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Commands;
+using Lsquared.DotnetTools.LicensesReporter.Console;
+using Lsquared.DotnetTools.LicensesReporter.Customizations;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Templating;
 
 using Microsoft.Build.Locator;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,7 +23,7 @@ using Microsoft.Extensions.DependencyInjection;
 MSBuildLocator.RegisterDefaults();
 Console.InputEncoding = Console.OutputEncoding = new UTF8Encoding();
 
-var root = new Lsquared.DotnetLicensesReporter.Commands.RootCommand();
+var root = new RootCommand();
 var parser = new CommandLineBuilder(root)
     .UseDefaults()
     .UseHelpBuilder((_) => CustomHelpBuilder.Instance.Value)

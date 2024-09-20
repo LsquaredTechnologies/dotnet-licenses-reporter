@@ -5,6 +5,6 @@
 
 using NuGet.Versioning;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public sealed record class Package(string Id, NuGetVersion? Version, bool IsAnalyzer);

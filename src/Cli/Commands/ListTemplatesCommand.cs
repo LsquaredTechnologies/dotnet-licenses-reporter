@@ -7,9 +7,9 @@ using System.CommandLine;
 using System.CommandLine.Help;
 using System.CommandLine.Parsing;
 
-using Lsquared.DotnetLicensesReporter.Customizations;
+using Lsquared.DotnetTools.LicensesReporter.Customizations;
 
-namespace Lsquared.DotnetLicensesReporter.Commands;
+namespace Lsquared.DotnetTools.LicensesReporter.Commands;
 
 internal sealed partial class ListTemplatesCommand : Command, ICustomHelpProvider
 {

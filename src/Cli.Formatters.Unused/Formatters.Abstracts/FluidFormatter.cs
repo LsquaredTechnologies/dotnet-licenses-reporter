@@ -8,11 +8,11 @@ using System.Text.Encodings.Web;
 
 using Fluid;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 using Microsoft.Extensions.Logging;
 
-namespace Lsquared.DotnetLicensesReporter.Formatters.Abstracts;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters.Abstracts;
 
 internal abstract partial class FluidFormatter(
     ILogger<FluidFormatter> logger,

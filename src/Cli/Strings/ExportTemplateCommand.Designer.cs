@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lsquared.DotnetLicensesReporter.Strings {
+namespace Lsquared.DotnetTools.LicensesReporter.Strings {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Lsquared.DotnetLicensesReporter.Strings {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lsquared.DotnetLicensesReporter.Strings.ExportTemplateCommand", typeof(ExportTemplateCommand).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lsquared.DotnetTools.LicensesReporter.Strings.ExportTemplateCommand", typeof(ExportTemplateCommand).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

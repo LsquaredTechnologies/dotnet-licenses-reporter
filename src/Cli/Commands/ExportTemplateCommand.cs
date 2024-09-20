@@ -6,12 +6,12 @@
 using System.CommandLine;
 using System.CommandLine.Help;
 
-using Lsquared.DotnetLicensesReporter.Customizations;
-using Lsquared.DotnetLicensesReporter.Templating;
+using Lsquared.DotnetTools.LicensesReporter.Customizations;
+using Lsquared.DotnetTools.LicensesReporter.Templating;
 
 using Spectre.Console;
 
-namespace Lsquared.DotnetLicensesReporter.Commands;
+namespace Lsquared.DotnetTools.LicensesReporter.Commands;
 
 internal sealed partial class ExportTemplateCommand : Command, ICustomHelpProvider
 {

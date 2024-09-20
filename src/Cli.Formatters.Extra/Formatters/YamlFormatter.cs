@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 using Microsoft.Extensions.Logging;
 
@@ -13,7 +13,7 @@ using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Lsquared.DotnetLicensesReporter.Formatters;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 internal sealed partial class YamlFormatter(ILogger<YamlFormatter> logger) : IFileOutputFormatter
 {

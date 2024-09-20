@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-namespace Lsquared.DotnetLicensesReporter.Core;
+namespace Lsquared.DotnetTools.LicensesReporter.Core;
 
 public static partial class Licenses
 {

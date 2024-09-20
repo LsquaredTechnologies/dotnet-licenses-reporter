@@ -5,6 +5,6 @@
 
 using BenchmarkDotNet.Running;
 
-using Lsquared.DotnetLicensesReporter.ExtraFormatters;
+using Lsquared.DotnetTools.LicensesReporter.ExtraFormatters;
 
 BenchmarkRunner.Run<CompareLiquidBasedFormatters>();

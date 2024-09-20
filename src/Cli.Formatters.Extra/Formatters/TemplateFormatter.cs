@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Formatters.Abstracts;
+using Lsquared.DotnetTools.LicensesReporter.Formatters.Abstracts;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Lsquared.DotnetLicensesReporter.Formatters;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 internal sealed partial class TemplateFormatter(ILogger<TemplateFormatter> logger, FileInfo templateFile)
     : DotLiquidFormatter(logger, "template", templateFile, () => new StreamReader(templateFile.OpenRead(), leaveOpen: true))

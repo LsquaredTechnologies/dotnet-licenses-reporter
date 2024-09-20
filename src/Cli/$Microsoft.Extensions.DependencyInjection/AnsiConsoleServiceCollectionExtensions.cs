@@ -5,7 +5,7 @@
 
 using System.CommandLine;
 
-using Lsquared.DotnetLicensesReporter;
+using Lsquared.DotnetTools.LicensesReporter;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

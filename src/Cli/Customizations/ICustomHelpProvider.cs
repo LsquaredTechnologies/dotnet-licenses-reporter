@@ -5,7 +5,7 @@
 
 using System.CommandLine.Help;
 
-namespace Lsquared.DotnetLicensesReporter.Customizations;
+namespace Lsquared.DotnetTools.LicensesReporter.Customizations;
 
 internal interface ICustomHelpProvider
 {

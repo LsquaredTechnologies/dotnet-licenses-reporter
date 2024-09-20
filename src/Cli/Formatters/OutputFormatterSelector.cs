@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-namespace Lsquared.DotnetLicensesReporter.Formatters;
+namespace Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 internal sealed class OutputFormatterSelector(
     IEnumerable<IOutputFormatter> registeredFormatters,

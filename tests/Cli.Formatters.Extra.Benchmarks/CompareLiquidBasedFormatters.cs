@@ -5,13 +5,13 @@
 
 using BenchmarkDotNet.Attributes;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Formatters.Abstracts;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Formatters.Abstracts;
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Lsquared.DotnetLicensesReporter.ExtraFormatters;
+namespace Lsquared.DotnetTools.LicensesReporter.ExtraFormatters;
 
 public class CompareLiquidBasedFormatters
 {
@@ -22,7 +22,7 @@ public class CompareLiquidBasedFormatters
             """;
 
     public List<PackageLicense> Packages { get; } = [
-        new("Id1", new("1.0.0"), new("https://nuget.org/Lsquared.DotnetLicensesReporter.Cli"), "MIT", new("https://mit-license.org/"), "Copyright", ["Lsquared"]),
+        new("Id1", new("1.0.0"), new("https://nuget.org/Lsquared.DotnetTools.LicensesReporter.Cli"), "MIT", new("https://mit-license.org/"), "Copyright", ["Lsquared"]),
         new("Id2", new("1.0.0"), new("https://nuget.org/Id2"), "MIT", new("https://mit-license.org/"), "Copyright", ["Lsquared"]),
         new("Id3", new("1.0.0"), new("https://nuget.org/Id3"), "MIT", new("https://mit-license.org/"), "Copyright", ["Lsquared"]),
         new("Id4", new("1.0.0"), new("https://nuget.org/Id4"), "MIT", new("https://mit-license.org/"), "Copyright", ["Lsquared"]),

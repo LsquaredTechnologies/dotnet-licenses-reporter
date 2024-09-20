@@ -5,7 +5,7 @@
 
 using NuGet.ProjectModel;
 
-namespace Lsquared.DotnetLicensesReporter.Collectors;
+namespace Lsquared.DotnetTools.LicensesReporter.Collectors;
 
 public interface ILockFileFactory
 {

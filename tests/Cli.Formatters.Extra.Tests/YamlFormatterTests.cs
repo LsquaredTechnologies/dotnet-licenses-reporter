@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Lsquared.DotnetLicensesReporter.ExtraFormatters;
+namespace Lsquared.DotnetTools.LicensesReporter.ExtraFormatters;
 
 public abstract class YamlFormatterTests
 {
@@ -22,9 +22,9 @@ public abstract class YamlFormatterTests
             YamlFormatter formatter = new(NullLogger<YamlFormatter>.Instance);
             using MemoryStream stream = new();
             PackageLicense licenseInformation = new(
-                "Lsquared.DotnetLicensesReporter.Cli",
+                "Lsquared.DotnetTools.LicensesReporter.Cli",
                 new("1.0.0"),
-                new("https://nuget.org/Lsquared.DotnetLicensesReporter.Cli"),
+                new("https://nuget.org/Lsquared.DotnetTools.LicensesReporter.Cli"),
                 "MIT",
                 new("https://mit-license.org/"),
                 "Copyright",

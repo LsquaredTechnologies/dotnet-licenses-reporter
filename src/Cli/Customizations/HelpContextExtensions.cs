@@ -7,7 +7,7 @@ using System.CommandLine;
 using System.CommandLine.Help;
 using System.Text;
 
-namespace Lsquared.DotnetLicensesReporter.Customizations;
+namespace Lsquared.DotnetTools.LicensesReporter.Customizations;
 
 internal static class HelpContextExtensions
 {

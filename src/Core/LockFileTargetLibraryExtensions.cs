@@ -5,7 +5,7 @@
 
 using NuGet.ProjectModel;
 
-namespace Lsquared.DotnetLicensesReporter;
+namespace Lsquared.DotnetTools.LicensesReporter;
 
 public static class LockFileTargetLibraryExtensions
 {

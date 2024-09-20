@@ -9,14 +9,14 @@ using System.CommandLine.Invocation;
 using System.CommandLine.IO;
 using System.Diagnostics;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 using Microsoft.Extensions.DependencyInjection;
 
 using Spectre.Console;
 
-namespace Lsquared.DotnetLicensesReporter.Commands;
+namespace Lsquared.DotnetTools.LicensesReporter.Commands;
 
 internal sealed partial class ReportCommand : Command
 {

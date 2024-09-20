@@ -7,14 +7,14 @@ using System.CommandLine;
 using System.CommandLine.Hosting;
 using System.CommandLine.Invocation;
 
-using Lsquared.DotnetLicensesReporter.Templating;
+using Lsquared.DotnetTools.LicensesReporter.Templating;
 
 using Microsoft.Extensions.DependencyInjection;
 
 using Spectre.Console;
 using Spectre.Console.Rendering;
 
-namespace Lsquared.DotnetLicensesReporter.Commands;
+namespace Lsquared.DotnetTools.LicensesReporter.Commands;
 
 internal sealed partial class ListTemplatesCommand : Command
 {

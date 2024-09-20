@@ -3,6 +3,6 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-namespace Lsquared.DotnetLicensesReporter.Console;
+namespace Lsquared.DotnetTools.LicensesReporter.Console;
 
 internal sealed class NoBorders() : TableBorders();

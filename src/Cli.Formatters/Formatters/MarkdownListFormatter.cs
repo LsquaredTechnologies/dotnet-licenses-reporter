@@ -3,12 +3,12 @@
 // SPDX-License-Identifier: MIT
 // </copyright>
 
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 using Microsoft.Extensions.Logging;
 
-namespace Lsquared.DotnetLicensesReporter;
+namespace Lsquared.DotnetTools.LicensesReporter;
 
 internal sealed partial class MarkdownListFormatter(ILogger<MarkdownListFormatter> logger) : IFileOutputFormatter
 {

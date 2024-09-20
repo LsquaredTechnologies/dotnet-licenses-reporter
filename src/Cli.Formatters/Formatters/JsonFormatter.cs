@@ -6,14 +6,14 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-using Lsquared.DotnetLicensesReporter.Collectors;
-using Lsquared.DotnetLicensesReporter.Formatters;
+using Lsquared.DotnetTools.LicensesReporter.Collectors;
+using Lsquared.DotnetTools.LicensesReporter.Formatters;
 
 using Microsoft.Extensions.Logging;
 
 using NuGet.Versioning;
 
-namespace Lsquared.DotnetLicensesReporter;
+namespace Lsquared.DotnetTools.LicensesReporter;
 
 internal sealed partial class JsonFormatter(ILogger<JsonFormatter> logger, bool prettyPrint) : IFileOutputFormatter
 {

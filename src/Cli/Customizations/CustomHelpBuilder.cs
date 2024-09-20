@@ -6,7 +6,7 @@
 using System.CommandLine;
 using System.CommandLine.Help;
 
-namespace Lsquared.DotnetLicensesReporter.Customizations;
+namespace Lsquared.DotnetTools.LicensesReporter.Customizations;
 
 /// <summary>
 /// Represents a custom help builder.

@@ -1,1 +1,1 @@
-- Lsquared.DotnetLicensesReporter.Cli v1.0.0
+- Lsquared.DotnetTools.LicensesReporter.Cli v1.0.0
