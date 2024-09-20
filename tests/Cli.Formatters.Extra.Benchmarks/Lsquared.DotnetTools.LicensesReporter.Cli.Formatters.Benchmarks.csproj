@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lsquared.DotnetTools.LicensesReporter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Cli.Formatters.Extra\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Extra.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters.Unused\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Unused.csproj" />
+    <ProjectReference Include="..\..\src\Core\Lsquared.DotnetTools.LicensesReporter.Core.csproj" />
+  </ItemGroup>
+
+</Project>

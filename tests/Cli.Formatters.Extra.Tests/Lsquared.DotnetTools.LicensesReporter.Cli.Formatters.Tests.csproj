@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <RootNamespace>Lsquared.DotnetLicensesReporter.ExtraFormatters</RootNamespace>
+    <RootNamespace>Lsquared.DotnetTools.LicensesReporter</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,10 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Cli.Formatters.Extra\Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra.csproj" />
-    <ProjectReference Include="..\..\src\Cli.Formatters.Unused\Lsquared.DotnetLicensesReporter.Cli.Formatters.Unused.csproj" />
-    <ProjectReference Include="..\..\src\Cli.Formatters\Lsquared.DotnetLicensesReporter.Cli.Formatters.csproj" />
-    <ProjectReference Include="..\..\src\Core\Lsquared.DotnetLicensesReporter.Core.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters.Extra\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Extra.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters.Unused\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Unused.csproj" />
+    <ProjectReference Include="..\..\src\Cli.Formatters\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.csproj" />
+    <ProjectReference Include="..\..\src\Core\Lsquared.DotnetTools.LicensesReporter.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

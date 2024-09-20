@@ -12,24 +12,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
-		DotnetLicensesReporter.sln.licenseheader = DotnetLicensesReporter.sln.licenseheader
+		DotnetTools-LicensesReporter.sln.licenseheader = DotnetTools-LicensesReporter.sln.licenseheader
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Core", "src\Core\Lsquared.DotnetLicensesReporter.Core.csproj", "{183ED176-900F-4B8D-8584-63D5388405BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Core", "src\Core\Lsquared.DotnetTools.LicensesReporter.Core.csproj", "{183ED176-900F-4B8D-8584-63D5388405BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli", "src\Cli\Lsquared.DotnetLicensesReporter.Cli.csproj", "{43029787-76D6-45BD-B820-3C9DC86628A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli", "src\Cli\Lsquared.DotnetTools.LicensesReporter.Cli.csproj", "{43029787-76D6-45BD-B820-3C9DC86628A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters", "src\Cli.Formatters\Lsquared.DotnetLicensesReporter.Cli.Formatters.csproj", "{94E34588-0442-4E32-BD61-C83FFFF32676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli.Formatters", "src\Cli.Formatters\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.csproj", "{94E34588-0442-4E32-BD61-C83FFFF32676}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra", "src\Cli.Formatters.Extra\Lsquared.DotnetLicensesReporter.Cli.Formatters.Extra.csproj", "{87B2766B-651B-408B-8159-6C1CB9FDE7C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Extra", "src\Cli.Formatters.Extra\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Extra.csproj", "{87B2766B-651B-408B-8159-6C1CB9FDE7C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Tests", "tests\Cli.Formatters.Extra.Tests\Lsquared.DotnetLicensesReporter.Cli.Formatters.Tests.csproj", "{955E11E4-1C0B-42C3-A228-B4BFE94BE846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Tests", "tests\Cli.Formatters.Extra.Tests\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Tests.csproj", "{955E11E4-1C0B-42C3-A228-B4BFE94BE846}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Benchmarks", "tests\Cli.Formatters.Extra.Benchmarks\Lsquared.DotnetLicensesReporter.Cli.Formatters.Benchmarks.csproj", "{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Benchmarks", "tests\Cli.Formatters.Extra.Benchmarks\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Benchmarks.csproj", "{1A28764A-D7FF-4745-A7BC-502E82CC5CBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetLicensesReporter.Cli.Formatters.Unused", "src\Cli.Formatters.Unused\Lsquared.DotnetLicensesReporter.Cli.Formatters.Unused.csproj", "{9153D11A-5FBB-4626-B93E-54B732CAA1DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Unused", "src\Cli.Formatters.Unused\Lsquared.DotnetTools.LicensesReporter.Cli.Formatters.Unused.csproj", "{9153D11A-5FBB-4626-B93E-54B732CAA1DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

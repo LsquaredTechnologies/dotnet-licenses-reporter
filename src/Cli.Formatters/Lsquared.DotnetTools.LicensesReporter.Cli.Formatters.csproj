@@ -4,11 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Lsquared.DotnetLicensesReporter</RootNamespace>
+    <RootNamespace>Lsquared.DotnetTools.LicensesReporter</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Lsquared.DotnetLicensesReporter.Cli" />
+    <InternalsVisibleTo Include="Lsquared.DotnetTools.LicensesReporter.Cli" />
     <InternalsVisibleTo Include="$(AssemblyName).Benchmarks" />
     <InternalsVisibleTo Include="$(AssemblyName).Tests" />
   </ItemGroup>
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Lsquared.DotnetLicensesReporter.Core.csproj" />
+    <ProjectReference Include="..\Core\Lsquared.DotnetTools.LicensesReporter.Core.csproj" />
   </ItemGroup>
 
 </Project>

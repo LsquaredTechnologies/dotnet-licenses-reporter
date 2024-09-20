@@ -4,11 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>Lsquared.DotnetLicensesReporter</RootNamespace>
+    <RootNamespace>Lsquared.DotnetTools.LicensesReporter</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Lsquared.DotnetLicensesReporter.Cli" />
+    <InternalsVisibleTo Include="Lsquared.DotnetTools.LicensesReporter.Cli" />
   </ItemGroup>
   
   <ItemGroup>
