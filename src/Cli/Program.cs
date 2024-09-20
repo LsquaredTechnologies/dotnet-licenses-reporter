@@ -19,15 +19,20 @@ using Lsquared.DotnetTools.LicensesReporter.Templating;
 
 using Microsoft.Build.Locator;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+using RootCommand = Lsquared.DotnetTools.LicensesReporter.Commands.RootCommand;
 
 MSBuildLocator.RegisterDefaults();
 Console.InputEncoding = Console.OutputEncoding = new UTF8Encoding();
 
+var sentinel = 0;
 var root = new RootCommand();
-var parser = new CommandLineBuilder(root)
+Parser parser = null;
+parser = new CommandLineBuilder(root)
     .UseDefaults()
     .UseHelpBuilder((_) => CustomHelpBuilder.Instance.Value)
-    .UseHost((host) => host
+    .UseHost((IHostBuilder host) => host
         .ConfigureServices((_, services) => services
             .AddAnsiConsole()
             .AddScoped<PackageCollector>()
@@ -51,6 +56,11 @@ var parser = new CommandLineBuilder(root)
         _ = root.ReportCommand.OutputFormatsOption.AddCompletions([.. OutputFormats.Get()]);
         root.ReportCommand.OutputFormatsOption.SetDefaultValue(OutputFormats.Defaults);
         await next(context);
+    })
+    .AddMiddleware((context, next) => sentinel++ switch
+    {
+        0 when context.ParseResult.Errors.Any(o => o.Message is "Required command was not provided.") => parser!.Parse(["report", .. args]).InvokeAsync(),
+        _ => next(context)
     })
     .Build();
 

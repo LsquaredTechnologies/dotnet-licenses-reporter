@@ -17,7 +17,7 @@ internal sealed class RootCommand : System.CommandLine.RootCommand, ICustomHelpP
 
     public RootCommand()
     {
-        TreatUnmatchedTokensAsErrors = true;
+        TreatUnmatchedTokensAsErrors = false;
         Name = "licenses";
         Add(ReportCommand);
         Add(TemplatesCommand);
