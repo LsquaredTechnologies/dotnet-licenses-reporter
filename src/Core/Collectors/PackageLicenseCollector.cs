@@ -40,28 +40,57 @@ public static class PackageLicenseCollector
         var manifest = Manifest.ReadFrom(nuspecStream, false);
         var metadata = manifest.Metadata;
         UpdateProjectUrl(metadata);
-        UpdateLicenseUrl(metadata);
+        UpdateLicenseUrl(metadata, package);
         var license = Licenses.GetCustomName(Licenses.Map(metadata.LicenseUrl));
         return PackageLicense.Create(metadata, license);
     }
 
-    private static void UpdateLicenseUrl(ManifestMetadata metadata)
+    private static void UpdateLicenseUrl(ManifestMetadata metadata, DownloadResourceResult package)
     {
         if (metadata.LicenseMetadata?.Type is LicenseType.File)
         {
-            if (TryGetLicenseUrl(metadata, out var licenseUrl))
+            // Read LICENSE file contents and check for license standard texts...
+            using var stream = package.PackageReader.GetStream(metadata.LicenseMetadata.License);
+            using StreamReader reader = new(stream, leaveOpen: true);
+            var contents = reader.ReadToEnd();
+            var licenseUrl = TryDetectLicenseFromContents(metadata, contents);
+            if (licenseUrl is not null)
                 metadata.SetLicenseUrl(licenseUrl);
         }
     }
 
-    private static bool TryGetLicenseUrl(ManifestMetadata metadata, out string? licenseUrl)
+    private static string? TryDetectLicenseFromContents(ManifestMetadata metadata, string contents)
     {
-        UriBuilder b = new(metadata.ProjectUrl);
-        // GitHub, TODO add more providers...
-        b.Host = b.Host.Replace("github.com", "raw.githubusercontent.com");
-        b.Path += $"/{metadata.Repository?.Branch ?? metadata.Repository?.Commit ?? "main"}/{metadata.LicenseMetadata.LicenseUrl}";
-        licenseUrl = b.Uri.ToString();
-        return true;
+        // please order licenses from most used to least used...
+
+        if (contents.Contains("MIT License", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.MIT).Key;
+
+        if (contents.Contains("3-clause BSD", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.BSD_3).Key;
+
+        if (contents.Contains("2-clause BSD", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.BSD_2).Key;
+
+        if (contents.Contains("1-clause BSD", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.BSD_1).Key;
+
+        if (contents.Contains("Apache License, Version 2.0", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.APACHE_2_0).Key;
+
+        if (contents.Contains("Apache Software License, Version 1.1", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.APACHE_1_1).Key;
+
+        if (contents.Contains("Apache Software License 1", StringComparison.OrdinalIgnoreCase))
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.APACHE_1_0).Key;
+
+        if (contents.Contains("Zero clause BSD", StringComparison.OrdinalIgnoreCase) ||
+            contents.Contains("0BSD", StringComparison.OrdinalIgnoreCase))
+        {
+            return Licenses.DefaultUrlsMapping.FirstOrDefault(o => o.Value == Licenses.BSD_0).Key;
+        }
+
+        return null;
     }
 
     private static void UpdateProjectUrl(ManifestMetadata metadata)
