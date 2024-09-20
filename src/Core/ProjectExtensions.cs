@@ -20,8 +20,17 @@ public static class ProjectExtensions
     public static string? GetRuntimeIdentifier(this Project project) =>
         project.GetPropertyValue("RuntimeIdentifier");
 
-    public static NuGetFramework GetTargetFramework(this Project project) =>
-        NuGetFramework.Parse(project.GetPropertyValue("TargetFramework"), DefaultFrameworkNameProvider.Instance);
+    public static NuGetFramework GetTargetFramework(this Project project)
+    {
+        var targetFramework = project.GetPropertyValue("TargetFramework");
+        if (targetFramework.Length is 0)
+        {
+            var targetFrameworks = project.GetPropertyValue("TargetFrameworks").Split(';');
+            targetFramework = targetFrameworks.OrderDescending().FirstOrDefault();
+        }
+
+        return NuGetFramework.Parse(targetFramework, DefaultFrameworkNameProvider.Instance);
+    }
 
     public static bool IsNetSdkProject(this Project project) =>
         string.Equals(project.GetPropertyValue("UsingMicrosoftNETSdk"), bool.TrueString, StringComparison.OrdinalIgnoreCase);
