@@ -4,7 +4,6 @@
 // </copyright>
 
 using System.Diagnostics;
-using System.Runtime.Serialization;
 
 using Lsquared.DotnetTools.LicensesReporter.Collectors;
 
