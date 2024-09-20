@@ -28,13 +28,14 @@ internal sealed partial class ReportCommand : Command
         public Task<int> InvokeAsync(InvocationContext context)
         {
             var command = (ReportCommand)context.ParseResult.CommandResult.Command;
+            var currentDir = new DirectoryInfo(Environment.CurrentDirectory);
             return Handle(
                 context.GetHost().Services.GetRequiredService<IConsole>(),
-                context.ParseResult.GetValueForArgument(command.ProjectArgument),
+                context.ParseResult.GetValueForArgument(command.ProjectArgument) ?? currentDir,
                 false,
                 true,
                 true,
-                context.ParseResult.GetValueForOption(command.OutputDirectoryOption) ?? new(Environment.CurrentDirectory),
+                context.ParseResult.GetValueForOption(command.OutputDirectoryOption) ?? currentDir,
                 context.ParseResult.GetValueForOption(command.OutputFormatsOption) ?? [.. OutputFormats.Defaults],
                 context.ParseResult.GetValueForOption(command.SilentOption),
                 context.ParseResult.GetValueForOption(command.TemplateOption),
