@@ -102,12 +102,21 @@ internal sealed partial class ReportCommand : Command
 
                             ansi.WriteLine("Collecting projects...");
                             var projects = ProjectCollector.Collect(collectOptions).ToList();
+                            ansi.Cursor.MoveRight(32);
+                            ansi.Cursor.MoveUp();
+                            ansi.WriteLine($"\x1b[32m{projects.Count}\x1b[0m projects collected.          ");
 
-                            ansi.WriteLine("Collecting packages...");
+                            ansi.WriteLine("Collecting dependencies...");
                             var dependencies = packageCollector.Collect(projects, collectOptions).ToList();
+                            ansi.Cursor.MoveRight(32);
+                            ansi.Cursor.MoveUp();
+                            ansi.WriteLine($"\x1b[32m{dependencies.Count}\x1b[0m {(collectOptions.Unique ? "unique " : string.Empty)}dependencies collected.            ");
 
-                            ansi.WriteLine("Collecting licenses...");
+                            ansi.WriteLine("Collecting packages information...");
                             var packages = PackageLicenseCollector.Collect(dependencies, collectOptions).ToList();
+                            ansi.Cursor.MoveRight(32);
+                            ansi.Cursor.MoveUp();
+                            ansi.WriteLine("Information collected.          ");
 
                             ansi.WriteLine($"Collection runs for {s.Elapsed.TotalSeconds:0.000}s");
                             return packages;
