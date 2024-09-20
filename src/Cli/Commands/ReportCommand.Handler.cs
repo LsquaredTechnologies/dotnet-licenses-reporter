@@ -32,9 +32,9 @@ internal sealed partial class ReportCommand : Command
             return Handle(
                 context.GetHost().Services.GetRequiredService<IConsole>(),
                 context.ParseResult.GetValueForArgument(command.ProjectArgument) ?? currentDir,
-                false,
-                true,
-                true,
+                context.ParseResult.GetValueForOption(command.NoRestoreOption),
+                context.ParseResult.GetValueForOption(command.IncludeTransitiveOption),
+                context.ParseResult.GetValueForOption(command.UniquePackageOption),
                 context.ParseResult.GetValueForOption(command.OutputDirectoryOption) ?? currentDir,
                 context.ParseResult.GetValueForOption(command.OutputFormatsOption) ?? [.. OutputFormats.Defaults],
                 context.ParseResult.GetValueForOption(command.SilentOption),

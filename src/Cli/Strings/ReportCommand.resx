@@ -150,4 +150,13 @@
   <data name="TemplateOptionHelpName" xml:space="preserve">
     <value>TEMPLATE_PATH</value>
   </data>
+  <data name="NoRestoreOptionDescription" xml:space="preserve">
+    <value>Do not restore project or solution before collecting packages.</value>
+  </data>
+  <data name="IncludeTransitiveOptionDescription" xml:space="preserve">
+    <value>Include distinct transitive packages.</value>
+  </data>
+  <data name="UniquePackageOptionDescription" xml:space="preserve">
+    <value>Deduplicate packages by Id/Version.</value>
+  </data>
 </root>

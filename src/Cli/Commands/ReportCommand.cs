@@ -22,6 +22,30 @@ internal sealed partial class ReportCommand : Command, ICustomHelpProvider
         HelpName = Strings.ReportCommand.ProjectArgumentHelpName,
     };
 
+    public Option<bool> NoRestoreOption { get; } = new(
+        aliases: ["--no-restore"],
+        description: Strings.ReportCommand.NoRestoreOptionDescription,
+        getDefaultValue: () => false)
+    {
+        Arity = ArgumentArity.ZeroOrOne,
+    };
+
+    public Option<bool> IncludeTransitiveOption { get; } = new(
+        aliases: ["--include-transitive"],
+        description: Strings.ReportCommand.IncludeTransitiveOptionDescription,
+        getDefaultValue: () => false)
+    {
+        Arity = ArgumentArity.ZeroOrOne,
+    };
+
+    public Option<bool> UniquePackageOption { get; } = new(
+        aliases: ["--unique-package", "--unique", "-u"],
+        description: Strings.ReportCommand.UniquePackageOptionDescription,
+        getDefaultValue: () => false)
+    {
+        Arity = ArgumentArity.ZeroOrOne,
+    };
+
     public Option<DirectoryInfo?> OutputDirectoryOption { get; } = new(
         aliases: ["--output", "-o"],
         description: Strings.ReportCommand.OutputDirectoryOptionDescription)
@@ -67,6 +91,9 @@ internal sealed partial class ReportCommand : Command, ICustomHelpProvider
         IsHidden = true;
 
         Add(ProjectArgument.ExistingOnly());
+        Add(NoRestoreOption);
+        Add(IncludeTransitiveOption);
+        Add(UniquePackageOption);
         Add(OutputDirectoryOption!.ExistingOnly());
         var outputFormats = OutputFormats.Get();
         Add(OutputFormatsOption.AddCompletions([.. outputFormats]));

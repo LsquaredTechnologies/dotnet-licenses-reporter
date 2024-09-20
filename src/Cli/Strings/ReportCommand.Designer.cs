@@ -70,6 +70,24 @@ namespace Lsquared.DotnetTools.LicensesReporter.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Include distinct transitive packages..
+        /// </summary>
+        internal static string IncludeTransitiveOptionDescription {
+            get {
+                return ResourceManager.GetString("IncludeTransitiveOptionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do not restore project or solution before collecting packages..
+        /// </summary>
+        internal static string NoRestoreOptionDescription {
+            get {
+                return ResourceManager.GetString("NoRestoreOptionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open the generated file with the default application..
         /// </summary>
         internal static string OpenFileOptionDescription {
@@ -156,6 +174,15 @@ namespace Lsquared.DotnetTools.LicensesReporter.Strings {
         internal static string TemplateOptionHelpName {
             get {
                 return ResourceManager.GetString("TemplateOptionHelpName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deduplicate packages by Id/Version..
+        /// </summary>
+        internal static string UniquePackageOptionDescription {
+            get {
+                return ResourceManager.GetString("UniquePackageOptionDescription", resourceCulture);
             }
         }
     }
