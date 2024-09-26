@@ -33,9 +33,10 @@ internal abstract partial class DotLiquidFormatter(
     public FileInfo CreateFile(DirectoryInfo directory)
     {
         directory.Create();
+        var outputFileName = templateFile.Name;
         var extension = templateFile.Extension;
-        if (extension is ".tpl" or ".tmpl") extension = Path.GetExtension(Path.GetFileNameWithoutExtension(templateFile.Name))!;
-        return new(Path.Combine(directory.FullName, Path.ChangeExtension("licenses.???", extension)));
+        if (extension is ".tpl" or ".tmpl") outputFileName = Path.GetFileNameWithoutExtension(templateFile.Name)!;
+        return new(Path.Combine(directory.FullName, outputFileName));
     }
 
     public async Task Write(Stream stream, IReadOnlyList<PackageLicense> packages)
